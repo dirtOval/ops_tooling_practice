@@ -2,7 +2,7 @@
 import argparse
 import json
 
-def parse_logs(file):
+def count_by_level(file, service=None):
   log_count: dict = {
     'DEBUG': 0,
     'INFO': 0,
@@ -13,7 +13,8 @@ def parse_logs(file):
   with open(file) as f:
     for x in f:
       log = json.loads(x)
-      # print(log['level'])
+      if service and log['service'] not in service:
+        continue
       if log['level'] in log_count:
         log_level: string = log['level']
         log_count[log_level] += 1
@@ -24,10 +25,19 @@ def parse_logs(file):
 def main():
   parser = argparse.ArgumentParser(description="Count error logs by severity level")
   parser.add_argument('-f', '--file', type=str, default=None, help='The log file to be parsed' )
+  parser.add_argument('-s', '--service', type=str, nargs='*', default=None, help='The service(s) to be monitored.')
   args = parser.parse_args()
-  result = parse_logs(args.file)
-  print(result)
 
+  result = count_by_level(args.file, args.service)
+  output_text: str = ''
+  if args.service:
+    output_text += 'services monitored: '
+    for service in args.service: output_text += f'{service} '
+    output_text += '\n'
+  for x in result.keys():
+    output_text += f'{x}: {result[x]}\n'
+    # print(f'{x}: {result[x]}')
+  print(output_text)
 if __name__ == "__main__":
   main()
 #we're going to make a shell script that will read a log file containing JSON
