@@ -13,15 +13,23 @@ def parse_logs(file):
   with open(file) as f:
     for x in f:
       log = json.loads(x)
-      print(log['level'])
+      # print(log['level'])
       if log['level'] in log_count:
         log_level: string = log['level']
         log_count[log_level] += 1
       else:
         raise KeyError(f'Error level not found: {log_level}')
-  print(log_count)
-parse_logs('test_logs.txt')
+  return log_count
 
+def main():
+  parser = argparse.ArgumentParser(description="Count error logs by severity level")
+  parser.add_argument('-f', '--file', type=str, default=None, help='The log file to be parsed' )
+  args = parser.parse_args()
+  result = parse_logs(args.file)
+  print(result)
+
+if __name__ == "__main__":
+  main()
 #we're going to make a shell script that will read a log file containing JSON
 #and parse it, providing data about the messages.
 
