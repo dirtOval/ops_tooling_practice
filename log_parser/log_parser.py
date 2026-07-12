@@ -3,11 +3,23 @@ import argparse
 import json
 
 def parse_logs(file):
+  log_count: dict = {
+    'DEBUG': 0,
+    'INFO': 0,
+    'WARN': 0,
+    'ERROR': 0,
+    'CRITICAL': 0,
+  }
   with open(file) as f:
     for x in f:
-      print(x)
-
-
+      log = json.loads(x)
+      print(log['level'])
+      if log['level'] in log_count:
+        log_level: string = log['level']
+        log_count[log_level] += 1
+      else:
+        raise KeyError(f'Error level not found: {log_level}')
+  print(log_count)
 parse_logs('test_logs.txt')
 
 #we're going to make a shell script that will read a log file containing JSON
