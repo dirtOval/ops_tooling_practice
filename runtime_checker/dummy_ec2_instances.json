@@ -1,0 +1,539 @@
+{
+    "Reservations": [
+        {
+            "ReservationId": "r-0a1b2c3d4e5f60001",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-0123456789abcdef0",
+                    "ImageId": "ami-0abcdef1234567890",
+                    "InstanceType": "m5.xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2026-07-12T08:12:00+00:00",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "PublicDnsName": "ec2-52-14-201-10.compute-1.amazonaws.com",
+                    "PublicIpAddress": "52.14.201.10",
+                    "PrivateDnsName": "ip-10-0-1-10.ec2.internal",
+                    "PrivateIpAddress": "10.0.1.10",
+                    "SubnetId": "subnet-0a1b2c3d",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {"GroupId": "sg-0a1b2c3d4e5f60001", "GroupName": "default"}
+                    ],
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "VolumeId": "vol-0a1b2c3d4e5f60001",
+                                "Status": "attached",
+                                "AttachTime": "2026-07-12T08:12:05+00:00",
+                                "DeleteOnTermination": true
+                            }
+                        }
+                    ],
+                    "Tags": [
+                        {"Key": "Name", "Value": "web-server-01"},
+                        {"Key": "Environment", "Value": "production"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-1b2c3d4e5f6a70002",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-1123456789abcdef1",
+                    "ImageId": "ami-0abcdef1234567890",
+                    "InstanceType": "m5.xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2026-07-12T08:12:05+00:00",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "PublicDnsName": "ec2-52-14-201-11.compute-1.amazonaws.com",
+                    "PublicIpAddress": "52.14.201.11",
+                    "PrivateDnsName": "ip-10-0-1-11.ec2.internal",
+                    "PrivateIpAddress": "10.0.1.11",
+                    "SubnetId": "subnet-0a1b2c3d",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "enabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {"GroupId": "sg-0a1b2c3d4e5f60001", "GroupName": "default"}
+                    ],
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "VolumeId": "vol-1a1b2c3d4e5f60003",
+                                "Status": "attached",
+                                "AttachTime": "2026-07-12T08:12:10+00:00",
+                                "DeleteOnTermination": true
+                            }
+                        }
+                    ],
+                    "Tags": [
+                        {"Key": "Name", "Value": "web-server-02"},
+                        {"Key": "Environment", "Value": "production"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-2c3d4e5f6a7b80003",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-2123456789abcdef2",
+                    "ImageId": "ami-0abcdef1234567890",
+                    "InstanceType": "m5.xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2026-07-10T08:12:08+00:00",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "PublicDnsName": "ec2-52-14-201-12.compute-1.amazonaws.com",
+                    "PublicIpAddress": "52.14.201.12",
+                    "PrivateDnsName": "ip-10-0-1-12.ec2.internal",
+                    "PrivateIpAddress": "10.0.1.12",
+                    "SubnetId": "subnet-0a1b2c3d",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {"GroupId": "sg-0a1b2c3d4e5f60001", "GroupName": "default"}
+                    ],
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "VolumeId": "vol-2a1b2c3d4e5f60004",
+                                "Status": "attached",
+                                "AttachTime": "2026-07-10T08:12:13+00:00",
+                                "DeleteOnTermination": true
+                            }
+                        }
+                    ],
+                    "InstanceLifecycle": "spot",
+                    "SpotInstanceRequestId": "sir-0a1b2c3d",
+                    "Tags": [
+                        {"Key": "Name", "Value": "worker-01"},
+                        {"Key": "Environment", "Value": "production"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-3d4e5f6a7b8c90004",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-3123456789abcdef3",
+                    "ImageId": "ami-0fedcba9876543210",
+                    "InstanceType": "r5.2xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2026-07-09T09:01:00+00:00",
+                    "State": {
+                        "Code": 0,
+                        "Name": "pending"
+                    },
+                    "PublicDnsName": "",
+                    "PublicIpAddress": null,
+                    "PrivateDnsName": "ip-10-0-1-13.ec2.internal",
+                    "PrivateIpAddress": "10.0.1.13",
+                    "SubnetId": "subnet-1b2c3d4e",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {"GroupId": "sg-1b2c3d4e5f6a7002", "GroupName": "worker-sg"}
+                    ],
+                    "BlockDeviceMappings": [],
+                    "InstanceLifecycle": "spot",
+                    "SpotInstanceRequestId": "sir-1b2c3d4e",
+                    "Tags": [
+                        {"Key": "Name", "Value": "worker-02"},
+                        {"Key": "Environment", "Value": "staging"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-4e5f6a7b8c9d10005",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-4123456789abcdef4",
+                    "ImageId": "ami-0fedcba9876543210",
+                    "InstanceType": "r5.2xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2026-07-12T09:05:00+00:00",
+                    "State": {
+                        "Code": 0,
+                        "Name": "pending"
+                    },
+                    "PublicDnsName": "",
+                    "PublicIpAddress": null,
+                    "PrivateDnsName": "ip-10-0-1-14.ec2.internal",
+                    "PrivateIpAddress": "10.0.1.14",
+                    "SubnetId": "subnet-1b2c3d4e",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {"GroupId": "sg-1b2c3d4e5f6a7002", "GroupName": "worker-sg"}
+                    ],
+                    "BlockDeviceMappings": [],
+                    "InstanceLifecycle": "spot",
+                    "SpotInstanceRequestId": "sir-2c3d4e5f",
+                    "Tags": [
+                        {"Key": "Name", "Value": "worker-03"},
+                        {"Key": "Environment", "Value": "staging"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-5f6a7b8c9d0e20006",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-5123456789abcdef5",
+                    "ImageId": "ami-0123abc456def7890",
+                    "InstanceType": "c5.4xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2026-07-12T09:10:00+00:00",
+                    "State": {
+                        "Code": 0,
+                        "Name": "pending"
+                    },
+                    "PublicDnsName": "",
+                    "PublicIpAddress": null,
+                    "PrivateDnsName": "ip-10-0-1-15.ec2.internal",
+                    "PrivateIpAddress": "10.0.1.15",
+                    "SubnetId": "subnet-2c3d4e5f",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1d",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {"GroupId": "sg-2c3d4e5f6a7b8003", "GroupName": "batch-sg"}
+                    ],
+                    "BlockDeviceMappings": [],
+                    "InstanceLifecycle": "spot",
+                    "SpotInstanceRequestId": "sir-3d4e5f6a",
+                    "Tags": [
+                        {"Key": "Name", "Value": "batch-job-01"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-6a7b8c9d0e1f30007",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-6123456789abcdef6",
+                    "ImageId": "ami-0abcdef1234567890",
+                    "InstanceType": "m5.xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2026-07-12T08:12:10+00:00",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "PublicDnsName": "ec2-52-14-201-16.compute-1.amazonaws.com",
+                    "PublicIpAddress": "52.14.201.16",
+                    "PrivateDnsName": "ip-10-0-1-16.ec2.internal",
+                    "PrivateIpAddress": "10.0.1.16",
+                    "SubnetId": "subnet-0a1b2c3d",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {"GroupId": "sg-0a1b2c3d4e5f60001", "GroupName": "default"}
+                    ],
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "VolumeId": "vol-6a1b2c3d4e5f60006",
+                                "Status": "attached",
+                                "AttachTime": "2026-07-12T08:12:15+00:00",
+                                "DeleteOnTermination": true
+                            }
+                        }
+                    ],
+                    "Tags": [
+                        {"Key": "Name", "Value": "web-server-03"},
+                        {"Key": "Environment", "Value": "production"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-7b8c9d0e1f2a40008",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-7123456789abcdef7",
+                    "ImageId": "ami-0123abc456def7890",
+                    "InstanceType": "c5.xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2025-01-14T22:00:00+00:00",
+                    "State": {
+                        "Code": 48,
+                        "Name": "terminated"
+                    },
+                    "PublicDnsName": "",
+                    "PublicIpAddress": null,
+                    "PrivateDnsName": "",
+                    "PrivateIpAddress": null,
+                    "SubnetId": "subnet-2c3d4e5f",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1d",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [],
+                    "BlockDeviceMappings": [],
+                    "InstanceLifecycle": "spot",
+                    "SpotInstanceRequestId": "sir-4e5f6a7b",
+                    "StateTransitionReason": "Server.InternalError: An internal error caused the instance to terminate during launch",
+                    "Tags": [
+                        {"Key": "Name", "Value": "batch-job-02"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-8c9d0e1f2a3b50009",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-8123456789abcdef8",
+                    "ImageId": "ami-0abcdef1234567890",
+                    "InstanceType": "m5.2xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2025-01-13T14:30:00+00:00",
+                    "State": {
+                        "Code": 48,
+                        "Name": "terminated"
+                    },
+                    "PublicDnsName": "",
+                    "PublicIpAddress": null,
+                    "PrivateDnsName": "",
+                    "PrivateIpAddress": null,
+                    "SubnetId": "subnet-0a1b2c3d",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [],
+                    "BlockDeviceMappings": [],
+                    "StateTransitionReason": "User initiated (2025-01-14 02:00:00 GMT)",
+                    "Tags": [
+                        {"Key": "Name", "Value": "web-server-old-01"},
+                        {"Key": "Environment", "Value": "decommissioned"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-9d0e1f2a3b4c60010",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-9123456789abcdef9",
+                    "ImageId": "ami-0123abc456def7890",
+                    "InstanceType": "c5.4xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2026-07-11T10:00:00+00:00",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "PublicDnsName": "ec2-52-14-201-19.compute-1.amazonaws.com",
+                    "PublicIpAddress": "52.14.201.19",
+                    "PrivateDnsName": "ip-10-0-1-19.ec2.internal",
+                    "PrivateIpAddress": "10.0.1.19",
+                    "SubnetId": "subnet-2c3d4e5f",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "enabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1d",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [
+                        {"GroupId": "sg-2c3d4e5f6a7b8003", "GroupName": "batch-sg"}
+                    ],
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "VolumeId": "vol-9a1b2c3d4e5f60010",
+                                "Status": "attached",
+                                "AttachTime": "2026-07-11T10:00:05+00:00",
+                                "DeleteOnTermination": true
+                            }
+                        }
+                    ],
+                    "Tags": [
+                        {"Key": "Name", "Value": "batch-job-03"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-0e1f2a3b4c5d70011",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-a123456789abcdea0",
+                    "ImageId": "ami-0fedcba9876543210",
+                    "InstanceType": "r5.xlarge",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2025-01-12T05:00:00+00:00",
+                    "State": {
+                        "Code": 48,
+                        "Name": "terminated"
+                    },
+                    "PublicDnsName": "",
+                    "PublicIpAddress": null,
+                    "PrivateDnsName": "",
+                    "PrivateIpAddress": null,
+                    "SubnetId": "subnet-1b2c3d4e",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1c",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [],
+                    "BlockDeviceMappings": [],
+                    "InstanceLifecycle": "spot",
+                    "SpotInstanceRequestId": "sir-5f6a7b8c",
+                    "StateTransitionReason": "Client.InvalidParameterValue: Invalid instance configuration specified for the instance group",
+                    "Tags": [
+                        {"Key": "Name", "Value": "worker-04"},
+                        {"Key": "Environment", "Value": "staging"}
+                    ]
+                }
+            ]
+        },
+        {
+            "ReservationId": "r-1f2a3b4c5d6e80012",
+            "OwnerId": "123456789012",
+            "Groups": [],
+            "Instances": [
+                {
+                    "InstanceId": "i-b123456789abcdeb1",
+                    "ImageId": "ami-0abcdef1234567890",
+                    "InstanceType": "m5.large",
+                    "KeyName": "prod-keypair",
+                    "LaunchTime": "2025-01-11T18:20:00+00:00",
+                    "State": {
+                        "Code": 48,
+                        "Name": "terminated"
+                    },
+                    "PublicDnsName": "",
+                    "PublicIpAddress": null,
+                    "PrivateDnsName": "",
+                    "PrivateIpAddress": null,
+                    "SubnetId": "subnet-0a1b2c3d",
+                    "VpcId": "vpc-0a1b2c3d",
+                    "Architecture": "x86_64",
+                    "Platform": null,
+                    "Monitoring": {"State": "disabled"},
+                    "Placement": {
+                        "AvailabilityZone": "us-east-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "SecurityGroups": [],
+                    "BlockDeviceMappings": [],
+                    "StateTransitionReason": "Server.InternalError: An internal error occurred during instance launch",
+                    "Tags": [
+                        {"Key": "Name", "Value": "web-server-old-02"},
+                        {"Key": "Environment", "Value": "decommissioned"}
+                    ]
+                }
+            ]
+        }
+    ]
+}

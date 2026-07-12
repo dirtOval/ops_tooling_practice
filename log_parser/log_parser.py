@@ -74,6 +74,7 @@ def main():
     output_text += f'{x}: {result[x]}\n'
     # print(f'{x}: {result[x]}')
   print(output_text)
+  
 if __name__ == "__main__":
   main()
 #we're going to make a shell script that will read a log file containing JSON
